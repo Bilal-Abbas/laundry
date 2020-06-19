@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: postgres
+  password: root
+  host: localhost
+
+development:
+  <<: *default
+  database: laundry_development
+
+test:
+  <<: *default
+  database: laundry_test
+
+production:
+  <<: *default
+  database: laundry_production
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  url: <%= ENV['DATABASE_URL'] %>

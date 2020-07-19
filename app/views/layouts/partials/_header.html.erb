@@ -17,7 +17,7 @@
           </li>
           <li class="nav-item">
             <!-- <a class="nav-link scroll" href="#contact">Pricing Plans</a> -->
-            <%= link_to("Pricing Plans", pricing_path, class: "nav-link") %>
+            <%= link_to("Pricing Plans", pricing_path, class: "nav-link", id: "pricing-nav-link") %>
           </li>
           <% unless action_name == "pricing" %>
             <li class="nav-item dropdown mr-3">
@@ -27,7 +27,7 @@
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <a class="dropdown-item scroll" href="#services">Services</a>
-                <a class="dropdown-item scroll" href="#team">Team</a>
+                <!-- <a class="dropdown-item scroll" href="#team">Team</a> -->
                 <a class="dropdown-item scroll" href="#gallery">Gallery</a>
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item scroll" href="#testimonials">Testimonials</a>
@@ -49,3 +49,10 @@
     </nav>
   </div>
 </header>
+
+<script type="text/javascript">
+  if(<%= action_name == "pricing" %>){
+    $(".navbar-nav .active").removeClass("active")
+    $(".navbar-nav #pricing-nav-link").addClass("active")
+  }
+</script>

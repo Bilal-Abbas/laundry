@@ -47,3 +47,8 @@
   white-space: nowrap;
 }
 
+.slider-info h3{
+  color: #48bf91 !important;
+  text-shadow: 4px 1px 1px white !important;
+}
+

@@ -73,7 +73,23 @@
   </head>
 
   <body>
-    <%= render "layouts/partials/header" %>
-    <%= yield %>
+    <!-- header -->
+      <%= render "layouts/partials/header" %>
+    <!-- //header -->
+    <!-- body -->
+      <%= yield %>
+    <!-- //body -->
+    <!-- contact -->
+      <%= render "layouts/partials/contact" %>
+    <!-- //contact -->
+    <!-- slide -->
+      <%= render "layouts/partials/slide" %>
+    <!--//slide-->
+    <!-- footer -->
+      <%= render "layouts/partials/footer" %>
+    <!-- //footer -->
+    <!-- order modal -->
+      <%= render "layouts/partials/order_modal" %>
+    <!-- //order modal -->
   </body>
 </html>

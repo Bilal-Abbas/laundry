@@ -6,3 +6,44 @@
 .store-front{
   width: 200px;
 }
+
+#pricing .pricing-images{
+  width: 250px !important;
+}
+
+#pricing .bg-price{
+  width: 100% !important;
+} 
+
+#pricing .main-row{
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+#pricing .sub-sections{
+  padding-right: 0px;
+  padding-left: 20px;
+}
+
+#pricing .sub-sections .service-type{
+  white-space: nowrap;
+}
+
+.marquee-text{
+  font-size: 20px;
+  color: #48BF91;
+  font-weight: bold;
+}
+
+#pricing .table{
+  text-align: center;
+}
+
+#pricing .table-responsive-sm{
+  width: 100%;
+}
+
+.no-wrap-text{
+  white-space: nowrap;
+}
+

@@ -367,7 +367,7 @@ p.sub-para {
 
 .about-w3ls {
     margin-top: -5em;
-    background: url(/assets/w1.jpg) no-repeat right;
+    /*background: url(/assets/w1.jpg) no-repeat right;*/
 }
 
 div#services {

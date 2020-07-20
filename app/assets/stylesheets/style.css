@@ -100,7 +100,7 @@ header h1 a span {
 /* banner */
 
 .banner {
-    background: url(/assets/banner1.jpeg)no-repeat;
+    background: url(/assets/banner3.jpg)no-repeat;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -528,7 +528,7 @@ p.count-text {
 /* slide */
 
 .slide-bg {
-    background: url(/assets/slide.jpg) no-repeat;
+    background: url(/assets/banner.jpg) no-repeat;
     background-size: cover;
     min-height: 35vw;
     background-attachment: fixed;
@@ -643,7 +643,7 @@ ul.portfolio-area li figure {
 /* stats */
 
 .agile_stats {
-    background: url(/assets/stat.jpg) no-repeat;
+    background: url(/assets/banner2.jpg) no-repeat;
     background-size: cover;
     min-height: 500px;
     background-attachment: fixed;

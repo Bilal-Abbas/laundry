@@ -106,11 +106,11 @@ header h1 a span {
     -o-background-size: cover;
     -ms-background-size: cover;
     background-size: cover;
-    height: 40vw;
+    height: 28vw;
 }
 
 .banner-text {
-    padding: 14vw 0 0;
+    padding: 5vw 0 0;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -1524,7 +1524,7 @@ h5.modal-title {
         left: 43%;
     }
     .banner {
-        height: 380px;
+        height: 300px;
     }
     .slider-info h3 {
         font-size: 2.1em;

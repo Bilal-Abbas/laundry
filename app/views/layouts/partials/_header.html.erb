@@ -19,30 +19,44 @@
             <!-- <a class="nav-link scroll" href="#contact">Pricing Plans</a> -->
             <%= link_to("Pricing Plans", pricing_path, class: "nav-link", id: "pricing-nav-link") %>
           </li>
-          <% unless action_name == "pricing" %>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-                  aria-expanded="false">
-                Services
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <span class="dropdown-item scroll">Shirts</span>
-                <span class="dropdown-item scroll">Dry Cleaning</span>
-                <span class="dropdown-item scroll">Household Linen</span>
-                <span class="dropdown-item scroll">Repairs & Alterations</span>
-                <span class="dropdown-item scroll">Wedding Dress Cleaning</span>
-                <span class="dropdown-item scroll">Leather & Suede</span>
-                <span class="dropdown-item scroll">Collection and Delivery</span>
-                <!-- <a class="dropdown-item scroll" href="#services">Services</a> -->
-                <!-- <a class="dropdown-item scroll" href="#team">Team</a> -->
-                <!-- <a class="dropdown-item scroll" href="#gallery">Gallery</a> -->
-                <!-- <div class="dropdown-divider"></div> -->
-                <!-- <a class="dropdown-item scroll" href="#testimonials">Testimonials</a> -->
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link scroll" href="#about">about</a>
-            </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle services-nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+              Services
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <span class="dropdown-item scroll">
+              <%= link_to('Shirts'.html_safe, service_shirts_path, class: "nav-link", method: "get") %>
+              </span>
+              <span class="dropdown-item scroll">
+                  <%= link_to('Dry Cleaning'.html_safe, service_dry_cleaning_path, class: "nav-link", method: "get") %>
+              </span>
+              <span class="dropdown-item scroll">
+                <%= link_to('Household Linen'.html_safe, service_household_linen_path, class: "nav-link", method: "get") %>
+              </span>
+              <span class="dropdown-item scroll">
+              <%= link_to('Repairs & Alterations'.html_safe, service_repairs_alterations_path, class: "nav-link", method: "get") %>
+              </span>
+              <span class="dropdown-item scroll">
+                <%= link_to('Wedding Dress Cleaning'.html_safe, service_wedding_dress_cleaning_path, class: "nav-link", method: "get") %>
+              </span>
+              <span class="dropdown-item scroll">
+                <%= link_to('Leather & Suede'.html_safe, service_leather_suede_path, class: "nav-link", method: "get") %>
+              </span>
+              <span class="dropdown-item scroll">
+                <%= link_to('Collection and Delivery'.html_safe, service_collection_delivery_path, class: "nav-link", method: "get") %>
+              </span>
+              <!-- <a class="dropdown-item scroll" href="#services">Services</a> -->
+              <!-- <a class="dropdown-item scroll" href="#team">Team</a> -->
+              <!-- <a class="dropdown-item scroll" href="#gallery">Gallery</a> -->
+              <!-- <div class="dropdown-divider"></div> -->
+              <!-- <a class="dropdown-item scroll" href="#testimonials">Testimonials</a> -->
+            </div>
+          </li>
+            <% unless action_name == "pricing" %>
+              <li class="nav-item">
+                <a class="nav-link scroll" href="#about">about</a>
+              </li>
             <% end %>
           <li class="nav-item">
             <a class="nav-link scroll" href="#contact">contact</a>
@@ -61,5 +75,8 @@
   if(<%= action_name == "pricing" %>){
     $(".navbar-nav .active").removeClass("active")
     $(".navbar-nav #pricing-nav-link").addClass("active")
+  }else if(<%= controller_name == "service" %>){
+    $(".navbar-nav .active").removeClass("active")
+    $(".navbar-nav .services-nav-link").addClass("active")
   }
 </script>

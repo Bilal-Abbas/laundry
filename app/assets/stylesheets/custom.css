@@ -51,6 +51,37 @@
     height: 100%;
 }
 
+#service .container .banner-text{
+  /*padding: 15vw 0 0;*/
+  max-width: 900px;
+  margin: 0 auto;
+  color: white;
+}
+
+#service{
+  height: 35vh;
+}
+
+.w3-service .container.info-text{
+  text-align: center;
+  font-family: 'Lato',Helvetica,Arial,Lucida,sans-serif;
+  padding: 57px 39px;
+}
+
+#service .container, #service .container .banner-text, #service .container .banner-text h1{
+  height: 100%;
+}
+
+#service .container .banner-text h1{
+  display: flex;
+  align-items: center;
+}
+
+.services-nav-link .dropdown-item.active, .dropdown-item:active{
+  background-color: transparent !important;
+}
+
+
 /*.slider-info h3{
   color: #48bf91 !important;
   text-shadow: 4px 1px 1px white !important;

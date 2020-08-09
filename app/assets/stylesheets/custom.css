@@ -81,6 +81,10 @@
   background-color: transparent !important;
 }
 
+#service .container .banner-text{
+  margin: 0px !important;
+}
+
 
 /*.slider-info h3{
   color: #48bf91 !important;

@@ -53,11 +53,11 @@
               <!-- <a class="dropdown-item scroll" href="#testimonials">Testimonials</a> -->
             </div>
           </li>
-            <% unless action_name == "pricing" %>
-              <li class="nav-item">
-                <a class="nav-link scroll" href="#about">about</a>
-              </li>
-            <% end %>
+          <% if controller_name == "home" and action_name != "pricing" %>
+            <li class="nav-item">
+              <a class="nav-link scroll" href="#about">about</a>
+            </li>
+          <% end %>
           <li class="nav-item">
             <a class="nav-link scroll" href="#contact">contact</a>
           </li>

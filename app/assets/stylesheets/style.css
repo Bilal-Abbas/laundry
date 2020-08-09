@@ -530,7 +530,7 @@ p.count-text {
 .slide-bg {
     background: url(/assets/banner.jpg) no-repeat;
     background-size: cover;
-    min-height: 35vw;
+    /*min-height: 28vw;*/
     background-attachment: fixed;
 }
 

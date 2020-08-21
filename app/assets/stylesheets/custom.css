@@ -58,9 +58,9 @@
   color: white;
 }
 
-#service{
-  height: 35vh;
-}
+/*#service{
+  height: 50vh;
+}*/
 
 .w3-service .container.info-text{
   text-align: center;
@@ -72,9 +72,15 @@
   height: 100%;
 }
 
-#service .container .banner-text h1{
+.banner#service{
+  background: none;
+}
+
+#service .container .banner-text h3{
   display: flex;
   align-items: center;
+  color: #48BF91;
+  height: 100%
 }
 
 .services-nav-link .dropdown-item.active, .dropdown-item:active{
@@ -84,6 +90,65 @@
 #service .container .banner-text{
   margin: 0px !important;
 }
+
+#service.banner{
+  position: relative;
+}
+
+#service .banner-image-holder{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  height: auto;
+}
+
+
+#service .banner-image-holder img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#service .banner-content-holder{
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+@media screen and (max-width: 736px) {
+#service .container .banner-text h3 {
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 450px) {
+.banner#service{
+  height: auto
+}
+
+.banner#service .banner-image-holder{
+  height: auto
+}
+
+.banner#service .banner-image-holder img{
+  height: 200px;
+}
+
+#service .container .banner-text h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+@media screen and (min-width: 1400px) {
+#service .banner-image-holder img{
+  height: 450px;
+}
+
+/*#pricing .table-responsive-sm{
+    overflow-x: scroll !important;
+}*/
 
 
 /*.slider-info h3{

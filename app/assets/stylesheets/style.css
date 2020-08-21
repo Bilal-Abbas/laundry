@@ -1372,6 +1372,9 @@ h5.modal-title {
     .banner {
         height: 47vw;
     }
+    .banner#service {
+        height: 28vw;
+    }
     .slider-info h3 {
         font-size: 4.5vw;
     }

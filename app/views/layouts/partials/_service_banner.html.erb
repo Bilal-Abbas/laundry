@@ -1,16 +1,26 @@
 <div class="banner" id="service">
-  <div class="container">
-    <div class="banner-text">
-      <h1>
-        <% if action_name == "repairs_alterations" %>
-          Repairs & Alterations
-        <% elsif action_name == "leather_suede" %>
-          Leather & Suede
-        <% elsif action_name == "collection_delivery" %>
-          Collection & Delivery
-        <% else %>
-          <%= action_name.humanize.titlecase %>
-        <% end %>     
+  <div class="banner-image-holder">
+    <img src="/assets/<%=action_name%>.jpg"/>
+  </div>
+  <div class="banner-content-holder">
+    <div class="container">
+      <div class="banner-text">
+        <h3>
+          <% if action_name == "repairs_alterations" %>
+            Repairs & Alterations
+          <% elsif action_name == "leather_suede" %>
+            Leather & Suede Cleaning
+          <% elsif action_name == "collection_delivery" %>
+            Collection and Delivery
+          <% elsif action_name == "household_linen" %>
+            Bed linen & Household
+          <% elsif action_name == "shirts" %>
+            Shirt Service
+          <% else %>
+            <%= action_name.humanize.titlecase %>
+          <% end %> 
+        </h3>    
+      </div>
     </div>
   </div>
 </div>

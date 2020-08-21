@@ -26,13 +26,14 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <span class="dropdown-item scroll">
-              <%= link_to('Shirts'.html_safe, service_shirts_path, class: "nav-link", method: "get") %>
-              </span>
-              <span class="dropdown-item scroll">
                   <%= link_to('Dry Cleaning'.html_safe, service_dry_cleaning_path, class: "nav-link", method: "get") %>
               </span>
               <span class="dropdown-item scroll">
-                <%= link_to('Household Linen'.html_safe, service_household_linen_path, class: "nav-link", method: "get") %>
+              <%= link_to('Shirts Service'.html_safe, service_shirts_path, class: "nav-link", method: "get") %>
+              </span>
+              
+              <span class="dropdown-item scroll">
+                <%= link_to('Bed linen & Household'.html_safe, service_household_linen_path, class: "nav-link", method: "get") %>
               </span>
               <span class="dropdown-item scroll">
               <%= link_to('Repairs & Alterations'.html_safe, service_repairs_alterations_path, class: "nav-link", method: "get") %>
@@ -41,7 +42,7 @@
                 <%= link_to('Wedding Dress Cleaning'.html_safe, service_wedding_dress_cleaning_path, class: "nav-link", method: "get") %>
               </span>
               <span class="dropdown-item scroll">
-                <%= link_to('Leather & Suede'.html_safe, service_leather_suede_path, class: "nav-link", method: "get") %>
+                <%= link_to('Leather & Suede Cleaning'.html_safe, service_leather_suede_path, class: "nav-link", method: "get") %>
               </span>
               <span class="dropdown-item scroll">
                 <%= link_to('Collection and Delivery'.html_safe, service_collection_delivery_path, class: "nav-link", method: "get") %>
@@ -70,7 +71,11 @@
     </nav>
   </div>
 </header>
-
+<marquee scrollamount="10">
+  <span class="marquee-text">
+    We are open Monday to Friday 8:00 am to 7:00 pm, Saturday 8:00 am to 6:00 pm, Sunday 10:00 am to 4:00 pm, Pickup & Deliveries are available Monday to Saturday 8:00 am to 7:00 pm Min order £20 T&C Apply
+  </span>  
+</marquee>
 <script type="text/javascript">
   if(<%= action_name == "pricing" %>){
     $(".navbar-nav .active").removeClass("active")

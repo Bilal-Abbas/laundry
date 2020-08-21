@@ -119,8 +119,9 @@
 }
 
 @media screen and (max-width: 736px) {
-#service .container .banner-text h3 {
+  #service .container .banner-text h3 {
     font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -139,11 +140,13 @@
 #service .container .banner-text h3 {
     font-size: 1.1rem;
     font-weight: bold;
+  }
 }
 
 @media screen and (min-width: 1400px) {
-#service .banner-image-holder img{
-  height: 450px;
+  #service .banner-image-holder img{
+    height: 450px;
+  }
 }
 
 /*#pricing .table-responsive-sm{

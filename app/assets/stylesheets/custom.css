@@ -149,6 +149,42 @@
   }
 }
 
+@media screen and (min-width: 991px) {
+  #order-btn-outside {
+    display: none;
+  }
+  #order-btn-inside{
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  #order-btn-outside {
+    display: block;
+  }
+  #order-btn-inside{
+    display: none;
+  }
+
+  /*.navbar-collapse.collapse.show li{
+    text-align: right !important;
+    padding-right: 30px !important;
+  }*/
+}
+
+@media (min-width: 768px){
+.ml-md-auto, .mx-md-auto {
+     margin-left: 0px !important; 
+}
+}
+
+@media screen and (max-width: 321px){
+#order-btn-outside {
+    margin: -38px;
+    display: block;
+}
+}
+
 /*#pricing .table-responsive-sm{
     overflow-x: scroll !important;
 }*/

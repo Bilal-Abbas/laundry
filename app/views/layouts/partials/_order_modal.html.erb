@@ -2,73 +2,117 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title text-capitalize" id="exampleModalLabel1">order your dry clean</h5>
+        <h5 class="modal-title text-capitalize" id="exampleModalLabel1">Book your Order</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        <form class="p-3">
+        <%= form_tag(place_order_home_index_path, method: :post, :html => {:class => 'p-3'}) do %>
           <div class="form-group">
             <label for="recipient-name" class="col-form-label">Your Name</label>
-            <input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name" required="">
+            <%= text_field_tag :name, "",  type: "text", class: "form-control", placeholder:"", id: "recipient-name", required: "" %>   
           </div>
+
           <div class="form-group">
             <label for="recipient-name1" class="col-form-label">Your Email</label>
-            <input type="email" class="form-control" placeholder=" " name="Name" id="recipient-name1" required="">
+            <%= text_field_tag :email, "",  type: "email", class: "form-control", placeholder:"", id: "recipient-name1", required: "" %> 
           </div>
+
           <div class="form-group">
             <label for="recipient-name2" class="col-form-label">Phone</label>
-            <input type="text" class="form-control" placeholder=" " name="Name" id="recipient-name2" required="">
+            <%= text_field_tag :phone, "", type: "tel", pattern: '[\+]\d{2}\d{2}\d{4}\d{4}', class: "form-control", placeholder:"", id: "recipient-name2", required: "", title: 'Phone Number (Format: +442072811111)' %> 
           </div>
+
           <div class="form-group">
             <label class="mr-2 col-form-label">Pick Up</label>
-            <input id="datepicker1" name="check in" type="text" value="mm/dd/yyyy" class="form-control" required="">
+            <%= text_field_tag :pick_up, nil, type: "text", placeholder: "YYYY/MM/DD HH:MM", class: "form-control", required: "", id: "datepicker1"%> 
           </div>
-          <div class="form-group">
-            <label class="mr-2 col-form-label">Delivery </label>
-            <input id="datepicker2" name="check out" type="text" value="mm/dd/yyyy" class="form-control" required="">
+
+           <div class="form-group">
+            <label class="mr-2 col-form-label">Delivery</label>
+            <%= text_field_tag :delivery, nil, type: "text", placeholder: "YYYY/MM/DD HH:MM", class: "form-control", required: true, id: "datepicker2"%> 
           </div>
+
           <div class="form-check">
             <label class="form-check-label col-form-label" for="l1">
-              <input type="checkbox" class="form-check-input" value="" id="l1">Dry Cleaning
+              <%= check_box_tag :dry_cleaning, 1, false, class: "form-check-input" %> Dry Cleaning
             </label>
           </div>
+
           <div class="form-check">
             <label class="form-check-label col-form-label" for="l2">
-              <input type="checkbox" class="form-check-input" value="" id="l2">Shirt Service
+              <%= check_box_tag :shirt_service, 1, false, class: "form-check-input" %> Shirt Service
             </label>
           </div>
+
           <div class="form-check">
-            <label class="form-check-label col-form-label" id="l3">
-              <input type="checkbox" class="form-check-input" value="" id="13">Bedlinen & Household
+            <label class="form-check-label col-form-label" for="l3">
+              <%= check_box_tag :bedlinen_and_household, 1, false, class: "form-check-input" %>  Bedlinen & Household
             </label>
           </div>
+
           <div class="form-check">
             <label class="form-check-label col-form-label" for="l4">
-              <input type="checkbox" class="form-check-input" value="" id="l4">Repair & Alterations
+              <%= check_box_tag :repair_and_alterations, 1, false, class: "form-check-input" %>Repair & Alterations
             </label>
           </div>
+
           <div class="form-check">
             <label class="form-check-label col-form-label" for="l5">
-              <input type="checkbox" class="form-check-input" value="" id="l4">Dresses Cleaning
+              <%= check_box_tag :dress_cleaning, 1, false, class: "form-check-input" %>Dresses Cleaning
             </label>
           </div>
+
           <div class="form-check">
             <label class="form-check-label col-form-label" for="l6">
-              <input type="checkbox" class="form-check-input" value="" id="l4">Leather & Suede Cleaning
+              <%= check_box_tag :leather_and_suede_cleaning, 1, false, class: "form-check-input" %>Leather & Suede Cleaning
             </label>
           </div>
-          <div class="form-group">
+
+           <div class="form-group">
             <label for="comment" class="col-form-label">Pickup Address:</label>
-            <textarea class="form-control" rows="5" id="comment"></textarea>
+            <%= text_area_tag :address, nil,  class: "form-control", rows: "5", id: "comment", :required => true %>
           </div>
 
           <div class="right-w3l">
-            <input type="submit" class="form-control" value="pick my dry clean">
-          </div>
-        </form>
+            <%= submit_tag "Place Order", class: "form-control" %> 
+          </div>   
+        <% end %>  
       </div>
     </div>
   </div>
 </div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css" integrity="sha512-bYPO5jmStZ9WI2602V2zaivdAnbAhtfzmxnEGh9RwtlI00I9s8ulGe4oBa5XxiC6tCITJH/QG70jswBhbLkxPw==" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.20/jquery.datetimepicker.full.min.js" integrity="sha512-AIOTidJAcHBH2G/oZv9viEGXRqDNmfdPVPYOYKGy3fti0xIplnlgMHUGfuNRzC6FkzIo0iIxgFnr9RikFxK+sw==" crossorigin="anonymous"></script>
+
+<script>
+  $(function() {
+      $("#datepicker1").datetimepicker({
+        minDateTime: new Date(),
+        minTime: 0,
+        defaultDate: false,
+        autoclose: true
+      });
+
+      $("#datepicker2").datetimepicker({
+        minDateTime: new Date(),
+        defaultDate: false,
+        autoclose: true
+      });
+
+
+      $('#datepicker1').on('change', function () {
+        $("#datepicker1").prop( "readonly", true );
+        var d = $('#datepicker1').datetimepicker('getValue');
+        $('#datepicker2').datetimepicker('setOptions', {
+          minDateTime: new Date(),
+          minTime: d.getTime() + (1*60*60*1000),
+        });
+      });
+      $('#datepicker2').on('change', function () {
+        $("#datepicker2").prop( "readonly", true );
+      })
+    });
+</script>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SocietyJewels</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i,900,900i&display=swap" rel="stylesheet">
+  <style type="text/css">
+    /*.email-template{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 600px;
+    }
+    .logo-img{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 65px;
+      width: 65% !important;
+      height: 150px !important;
+    }
+    .email-body .welcome-note{
+      padding: 0 20px;
+      font-family: lato,helvetica neue,helvetica,arial,sans-serif;
+      font-size: 16px;
+      line-height: 25px; text-align: center;
+    }
+    .email-body .notify-text{
+      padding: 0 20px;
+      font-family: lato,helvetica neue,helvetica,arial,sans-serif;
+      font-size: 16px;
+      line-height: 25px; text-align: center;
+    }
+    .email-body .email-body-text p{
+      text-align:center;
+    }
+    .email-body .email-body-text p strong{
+      padding: 20px;
+    }
+    .email-body .email-template-link{
+      padding: 0 20px;
+      font-family: lato,helvetica neue,helvetica,arial,sans-serif;
+      font-size: 16px;
+      line-height: 25px; text-align: center;
+    }
+    .email-body .email-template-link a{
+      text-decoration: underline;
+    }
+    .email-body .email-footer{
+      font-family: lato,helvetica neue,helvetica,arial,sans-serif; 
+      text-align: center;
+    }
+    .email-template .email-copyright{
+      margin-top: 40px;
+      text-align: center;
+    }
+    .email-template .email-copyright em{
+      font-family: lato,helvetica neue,helvetica,arial,sans-serif;
+      text-align: center;
+      font-size:12px;
+      font-style: italic;
+    }
+    .email-template .body-seprator{
+      border-top: solid 2px;
+      margin-bottom: 30px;
+      border-color: #ffd249;
+    }*/
+  </style>
+    
+  </style>
+</head>
+<body>
+<div class="email-template">
+  <div class="email-body">
+    <h1>Order Details</h1>
+    <strong>Name: </strong><span><%= @resources[:name] %></span><br>
+    <strong>Email: </strong><span><%= @resources[:email] %></span><br>
+    <strong>Phone Number: </strong><span><%= @resources[:phone] %></span><br>
+    <strong>Pick Up: </strong><span><%= @resources[:pick_up] %></span><br>
+    <strong>Delivery: </strong><span><%= @resources[:delivery] %></span><br>
+    <strong>Dry Cleaning: </strong><span><%= @resources[:dry_cleaning] ? "Yes" : "No" %></span><br>
+    <strong>Shirt Service: </strong><span><%= @resources[:shirt_service] ? "Yes" : "No" %></span><br>
+    <strong>Bedlinen & Household: </strong><span><%= @resources[:bedlinen_and_household] ? "Yes" : "No" %></span><br>
+    <strong>Repair & Alterations: </strong><span><%= @resources[:repair_and_alterations] ? "Yes" : "No" %></span><br>
+    <strong>Dress Cleaning: </strong><span><%= @resources[:dress_cleaning] ? "Yes" : "No" %></span><br>
+    <strong>Leather & Suede Cleaning: </strong><span><%= @resources[:leather_and_suede_cleaning] ? "Yes" : "No" %></span><br>
+    <strong>Address: </strong><span><%= @resources[:address] %></span><br>
+  </div>
+</div>
+
+</body>
+</html>

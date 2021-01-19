@@ -1,4 +1,7 @@
 <!-- banner -->
+<% flash.each do |key, value| %>
+  <div class="alert alert-<%= key %>" style="text-align: center !important"><%= value %></div>
+<% end %>
   <%= render "layouts/partials/home_banner" %>
 <!-- //banner -->
 <!-- about -->

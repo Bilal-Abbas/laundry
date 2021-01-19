@@ -42,9 +42,9 @@ jQuery(function ($) {
   });
 });
 
-jQuery(function ($) {
-  $("#datepicker1,#datepicker2").datepicker();
-});
+// jQuery(function ($) {
+//   $("#datepicker1,#datepicker2").datepicker();
+// });
 
 jQuery(document).ready(function ($) {
   $('#owl-demo').owlCarousel({

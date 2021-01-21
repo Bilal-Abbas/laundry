@@ -77,6 +77,7 @@
     <strong>Phone Number: </strong><span><%= @resources[:phone] %></span><br>
     <strong>Pick Up: </strong><span><%= @resources[:pick_up] %></span><br>
     <strong>Delivery: </strong><span><%= @resources[:delivery] %></span><br>
+    <strong>Special Instruction: </strong><span><%= @resources[:special_instructions].present? ? @resources[:special_instructions] : "No Special Instructions"  %></span><br>
     <strong>Dry Cleaning: </strong><span><%= @resources[:dry_cleaning] ? "Yes" : "No" %></span><br>
     <strong>Shirt Service: </strong><span><%= @resources[:shirt_service] ? "Yes" : "No" %></span><br>
     <strong>Bedlinen & Household: </strong><span><%= @resources[:bedlinen_and_household] ? "Yes" : "No" %></span><br>
